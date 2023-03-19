@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/listitem_add_button"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listitem_min_height"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/checkbox_width"
+        android:layout_height="@dimen/icon_medium"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="36dp"
+        android:src="@drawable/baseline_add_24"
+        />
+
+    <TextView
+        style="@style/TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="12dp"
+        android:text="@string/task_add"
+        android:layout_gravity="center_vertical"
+        />
+
+</LinearLayout>

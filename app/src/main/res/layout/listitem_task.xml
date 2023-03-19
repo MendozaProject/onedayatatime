@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listitem_task"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <include layout="@layout/view_divider"
+        android:id="@+id/divider_top"
+        android:visibility="gone"
+        />
+
+    <include layout="@layout/view_divider"
+        android:id="@+id/divider_bottom"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="@dimen/checkbox_height"
+            android:padding="6dp"
+            android:src="@drawable/baseline_drag_indicator_24"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="@dimen/checkbox_width"
+            android:layout_height="@dimen/checkbox_height"
+            android:paddingRight="12dp"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="12dp"
+            >
+
+            <EditText
+                android:id="@+id/task_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:inputType="textLongMessage"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/task_note_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task note try to not make it too long but if it is it should wrap around like this"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/task_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today at 00:00"
+                android:textColor="?attr/colorPrimary"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/task_editing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    />
+
+                <Button
+                    android:id="@+id/delete_task_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="0dp"
+                    android:text="Delete"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="0dp"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/colorPrimary"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="1dp"
+                    />
+
+                <Button
+                    android:id="@+id/save_task_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:text="Save"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="0dp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_rectangle"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/clear_text_button"
+            android:layout_width="@dimen/listitem_min_height"
+            android:layout_height="@dimen/listitem_min_height"
+            android:background="@null"
+            android:src="@drawable/baseline_close_24"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
